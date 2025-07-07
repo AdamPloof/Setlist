@@ -4,9 +4,9 @@ using Setlist.Web.Models;
 
 namespace Setlist.Web.Data;
 
-public class SetlistContext : DbContext {
-    public SetlistContext(
-        DbContextOptions<SetlistContext> options
+public class SetlistDbContext : DbContext {
+    public SetlistDbContext(
+        DbContextOptions<SetlistDbContext> options
     ) : base(options) {}
 
     public DbSet<Song> Songs { get; set; } = null!;

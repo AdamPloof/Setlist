@@ -11,7 +11,7 @@ using Setlist.Web.Data;
 
 namespace Setlist.Web.Migrations
 {
-    [DbContext(typeof(SetlistContext))]
+    [DbContext(typeof(SetlistDbContext))]
     [Migration("20250707012102_InitialCreate")]
     partial class InitialCreate
     {

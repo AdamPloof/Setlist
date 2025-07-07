@@ -10,8 +10,8 @@ using Setlist.Web.Data;
 
 namespace Setlist.Web.Migrations
 {
-    [DbContext(typeof(SetlistContext))]
-    partial class SetlistContextModelSnapshot : ModelSnapshot
+    [DbContext(typeof(SetlistDbContext))]
+    partial class SetlistDbContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
         {
