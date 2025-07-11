@@ -11,4 +11,5 @@ public class Gig {
     public string? Location { get; set; }
     public DateTime? HitAt { get; set; }
     public List<Set> Sets { get; set; } = [];
+    public List<Project> Projects { get; set; } = [];
 }

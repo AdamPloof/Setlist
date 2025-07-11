@@ -1,0 +1,20 @@
+{
+    "compilerOptions": {
+        "target": "ES6",
+        "module": "ESNext",
+        "moduleResolution": "node",
+        "esModuleInterop": true,
+        "strict": true,
+        "sourceMap": true,
+        "outDir": "./wwwroot/dist",
+        "baseUrl": "./ClientApp",
+        "skipLibCheck": true
+    },
+    "include": [
+        "ClientApp/**/*"
+    ],
+    "exclude": [
+        "node_modules",
+        "wwwroot"
+    ]
+}

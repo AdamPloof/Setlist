@@ -484,5 +484,6 @@ $RECYCLE.BIN/
 # Vim temporary swap files
 *.swp
 
-# External libraries
+# External libraries and build assets
 **/wwwroot/lib/
+**/wwwroot/dist/

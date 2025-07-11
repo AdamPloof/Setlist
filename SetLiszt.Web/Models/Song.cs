@@ -10,4 +10,6 @@ public class Song {
     public required string Title { get; set; }
     public string? Artist { get; set; }
     public string? Filepath { get; set; }
+    public List<Set> Sets { get; set; } = [];
+    public List<Project> Projects { get; set; } = [];
 }
