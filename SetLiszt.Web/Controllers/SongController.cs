@@ -1,17 +1,17 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
-using Setlist.Web.Models;
-using Setlist.Web.Data;
+using SetLiszt.Web.Models;
+using SetLiszt.Web.Data;
 
-namespace Setlist.Web.Controllers;
+namespace SetLiszt.Web.Controllers;
 
 [ApiController]
 [Route("songs")]
 public class SongController : ControllerBase {
-    private readonly SetlistDbContext _dbContext;
+    private readonly SetLisztDbContext _dbContext;
 
-    public SongController(SetlistDbContext dbContext) {
+    public SongController(SetLisztDbContext dbContext) {
         _dbContext = dbContext;
     }
 

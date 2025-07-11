@@ -1,12 +1,12 @@
 using Microsoft.EntityFrameworkCore;
 
-using Setlist.Web.Models;
+using SetLiszt.Web.Models;
 
-namespace Setlist.Web.Data;
+namespace SetLiszt.Web.Data;
 
-public class SetlistDbContext : DbContext {
-    public SetlistDbContext(
-        DbContextOptions<SetlistDbContext> options
+public class SetLisztDbContext : DbContext {
+    public SetLisztDbContext(
+        DbContextOptions<SetLisztDbContext> options
     ) : base(options) {}
 
     public DbSet<Song> Songs { get; set; } = null!;

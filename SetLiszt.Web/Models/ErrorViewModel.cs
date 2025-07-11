@@ -1,4 +1,4 @@
-namespace Setlist.Web.Models;
+namespace SetLiszt.Web.Models;
 
 public class ErrorViewModel
 {

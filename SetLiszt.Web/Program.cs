@@ -1,12 +1,12 @@
 using Microsoft.EntityFrameworkCore;
 
-using Setlist.Web.Data;
+using SetLiszt.Web.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add database context
-builder.Services.AddDbContext<SetlistDbContext>(opt => 
-    opt.UseNpgsql(builder.Configuration.GetConnectionString("SetlistContext"))
+builder.Services.AddDbContext<SetLisztDbContext>(opt => 
+    opt.UseNpgsql(builder.Configuration.GetConnectionString("SetLisztContext"))
 );
 
 // Add services to the container.
@@ -18,7 +18,7 @@ var app = builder.Build();
 if (app.Environment.IsDevelopment()) {
     using (AsyncServiceScope scope = app.Services.CreateAsyncScope()) {
         IServiceProvider services = scope.ServiceProvider;
-        var dbContext = services.GetRequiredService<SetlistDbContext>();
+        var dbContext = services.GetRequiredService<SetLisztDbContext>();
         await DataSeeder.SeedSongsAsync(dbContext);
     }
 } else {

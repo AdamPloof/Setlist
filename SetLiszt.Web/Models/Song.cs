@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace Setlist.Web.Models;
+namespace SetLiszt.Web.Models;
 
 public class Song {
     [Key]

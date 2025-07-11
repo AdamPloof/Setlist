@@ -1,9 +1,9 @@
-using Setlist.Web.Models;
+using SetLiszt.Web.Models;
 
-namespace Setlist.Web.Data;
+namespace SetLiszt.Web.Data;
 
 public static class DataSeeder {
-    public static async Task SeedSongsAsync(SetlistDbContext context) {
+    public static async Task SeedSongsAsync(SetLisztDbContext context) {
         if (context.Songs.Any()) {
             return;
         }

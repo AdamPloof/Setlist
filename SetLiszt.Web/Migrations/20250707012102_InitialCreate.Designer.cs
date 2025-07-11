@@ -2,18 +2,21 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
-using Setlist.Web.Data;
+using SetLiszt.Web.Data;
 
 #nullable disable
 
-namespace Setlist.Web.Migrations
+namespace SetLiszt.Web.Migrations
 {
-    [DbContext(typeof(SetlistDbContext))]
-    partial class SetlistDbContextModelSnapshot : ModelSnapshot
+    [DbContext(typeof(SetLisztDbContext))]
+    [Migration("20250707012102_InitialCreate")]
+    partial class InitialCreate
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -22,7 +25,7 @@ namespace Setlist.Web.Migrations
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
-            modelBuilder.Entity("Setlist.Web.Models.Gig", b =>
+            modelBuilder.Entity("SetLiszt.Web.Models.Gig", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -45,7 +48,7 @@ namespace Setlist.Web.Migrations
                     b.ToTable("Gig", (string)null);
                 });
 
-            modelBuilder.Entity("Setlist.Web.Models.Set", b =>
+            modelBuilder.Entity("SetLiszt.Web.Models.Set", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -63,7 +66,7 @@ namespace Setlist.Web.Migrations
                     b.ToTable("Set", (string)null);
                 });
 
-            modelBuilder.Entity("Setlist.Web.Models.Song", b =>
+            modelBuilder.Entity("SetLiszt.Web.Models.Song", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -91,26 +94,26 @@ namespace Setlist.Web.Migrations
                     b.ToTable("Song", (string)null);
                 });
 
-            modelBuilder.Entity("Setlist.Web.Models.Set", b =>
+            modelBuilder.Entity("SetLiszt.Web.Models.Set", b =>
                 {
-                    b.HasOne("Setlist.Web.Models.Gig", null)
+                    b.HasOne("SetLiszt.Web.Models.Gig", null)
                         .WithMany("Sets")
                         .HasForeignKey("GigId");
                 });
 
-            modelBuilder.Entity("Setlist.Web.Models.Song", b =>
+            modelBuilder.Entity("SetLiszt.Web.Models.Song", b =>
                 {
-                    b.HasOne("Setlist.Web.Models.Set", null)
+                    b.HasOne("SetLiszt.Web.Models.Set", null)
                         .WithMany("Songs")
                         .HasForeignKey("SetId");
                 });
 
-            modelBuilder.Entity("Setlist.Web.Models.Gig", b =>
+            modelBuilder.Entity("SetLiszt.Web.Models.Gig", b =>
                 {
                     b.Navigation("Sets");
                 });
 
-            modelBuilder.Entity("Setlist.Web.Models.Set", b =>
+            modelBuilder.Entity("SetLiszt.Web.Models.Set", b =>
                 {
                     b.Navigation("Songs");
                 });
