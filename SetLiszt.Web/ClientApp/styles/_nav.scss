@@ -1,0 +1,43 @@
+@import "fonts";
+@import "custom";
+@import "variables";
+
+// Main nav
+.navbar-brand {
+    font-family: "Antic Didone", serif;
+}
+
+.navbar-brand.setliszt-brand {
+    position: absolute;
+    right: 0;
+    padding-right: 1rem;
+    top: 0;
+
+    @include media-breakpoint-up(sm) {
+        top: unset;
+        left: 0;
+        padding-left: 1rem;
+    }
+}
+
+.sl-nav-main {
+    border-bottom: 1px solid $grey-darker;
+    padding-left: 0;
+    padding-right: 0;
+
+    @include media-breakpoint-up(sm) {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+// Sidebar
+.sl-sidebar {
+    min-width: 200px;
+    display: flex;
+    justify-content: start;
+
+    .nav-link {
+        color: $body-color;
+    }
+}
