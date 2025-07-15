@@ -9,19 +9,29 @@
 
 .navbar-brand.setliszt-brand {
     position: absolute;
-    right: 0;
-    padding-right: 1rem;
     top: 0;
+    right: 0;
+    padding-left: calc($nav-link-padding-x + 0.75rem);
+    padding-right: 1rem;
 
     @include media-breakpoint-up(sm) {
         top: unset;
         left: 0;
-        padding-left: 1rem;
+    }
+}
+
+.sl-nav-container {
+    position: relative;
+
+    @each $bp, $max-width in $container-max-widths {
+        @include media-breakpoint-up($bp) {
+            max-width: $max-width;
+        }
     }
 }
 
 .sl-nav-main {
-    border-bottom: 1px solid $grey-darker;
+    border-bottom: 1px solid $grey;
     padding-left: 0;
     padding-right: 0;
 
