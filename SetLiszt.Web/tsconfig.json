@@ -8,6 +8,7 @@
         "sourceMap": true,
         "outDir": "./wwwroot/dist",
         "baseUrl": "./ClientApp",
+        "jsx": "preserve",
         "skipLibCheck": true
     },
     "include": [

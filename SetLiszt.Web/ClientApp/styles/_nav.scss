@@ -11,8 +11,8 @@
     position: absolute;
     top: 0;
     right: 0;
-    padding-left: calc($nav-link-padding-x + 0.75rem);
-    padding-right: 1rem;
+    // padding-left: calc($nav-link-padding-x + 0.75rem);
+    // padding-right: 1rem;
 
     @include media-breakpoint-up(sm) {
         top: unset;
@@ -49,5 +49,9 @@
 
     .nav-link {
         color: $body-color;
+
+        &:hover {
+            text-decoration: underline;
+        }
     }
 }

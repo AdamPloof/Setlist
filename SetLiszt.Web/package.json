@@ -11,8 +11,15 @@
     "license": "ISC",
     "description": "",
     "devDependencies": {
+        "@babel/core": "^7.28.0",
+        "@babel/preset-env": "^7.28.0",
+        "@babel/preset-react": "^7.27.1",
+        "@babel/preset-typescript": "^7.27.1",
         "@types/bootstrap": "^5.2.10",
+        "@types/react-dom": "^19.1.6",
+        "babel-loader": "^10.0.0",
         "css-loader": "^7.1.2",
+        "jsxobj": "^1.1.0",
         "mini-css-extract-plugin": "^2.9.2",
         "sass": "^1.89.2",
         "sass-loader": "^16.0.5",
@@ -24,6 +31,7 @@
     },
     "dependencies": {
         "@popperjs/core": "^2.11.8",
+        "@types/react": "^19.1.8",
         "bootstrap": "^5.3.7",
         "react": "^19.1.0",
         "react-bootstrap": "^2.10.10",
