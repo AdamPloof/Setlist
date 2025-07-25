@@ -8,7 +8,7 @@
         "sourceMap": true,
         "outDir": "./wwwroot/dist",
         "baseUrl": "./ClientApp",
-        "jsx": "preserve",
+        "jsx": "react-jsx",
         "skipLibCheck": true
     },
     "include": [

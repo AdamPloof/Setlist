@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require('webpack');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
@@ -16,19 +17,7 @@ module.exports = {
             {
                 test: /\.tsx?$/,
                 exclude: /node_modules/,
-                use: [
-                    'ts-loader',
-                    {
-                        loader: 'babel-loader',
-                        options: {
-                            presets: [
-                                ['@babel/preset-env', { targets: 'defaults' }],
-                                ['@babel/preset-react', { runtime: 'automatic' }],
-                                '@babel/preset-typescript'
-                            ]
-                        }
-                    }
-                ],
+                use: 'ts-loader'
             },
             {
                 test: /\.s[ac]ss$/i,
@@ -54,6 +43,9 @@ module.exports = {
     },
     plugins: [
         new MiniCssExtractPlugin({ filename: 'bundle.css' }),
+        new webpack.DefinePlugin({
+            'process.env.BASE_URL': JSON.stringify('/')
+        }),
     ],
     mode: 'development'
 };

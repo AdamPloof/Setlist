@@ -1,23 +1,18 @@
 import React, { StrictMode } from "react";
 import { createRoot } from 'react-dom/client';
-import Library from "./Library/Library";
+import ComponentFactory from "./ComponentFactory";
 
-function main() {
-    let component = null;
-    let targetContainer = null;
-    // let mode;
-
-    targetContainer = document.getElementById('library-component');
-    component = <Library></Library>;
-
-    if (!component || !targetContainer) {
+function main(): void {
+    const rootContainer: HTMLElement | null = document.getElementById('sl-root-container');
+    if (!rootContainer) {
         return;
     }
 
-    const root = createRoot(targetContainer);
+    const Component = ComponentFactory(rootContainer.dataset.componentType ?? '');
+    const root = createRoot(rootContainer);
     root.render(
         <StrictMode>
-            {component}
+            <Component />
         </StrictMode>
     );
 }
