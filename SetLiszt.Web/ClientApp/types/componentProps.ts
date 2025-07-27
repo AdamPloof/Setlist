@@ -1,5 +1,9 @@
 import { Song } from "./entities"
 
-export interface SongTableProps {
-    songs: Song[]
+export interface SongListProps {
+    songs: Song[];
+}
+
+export interface SongViewerProps {
+    song: Song | null;
 }

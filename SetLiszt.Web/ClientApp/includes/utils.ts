@@ -21,7 +21,7 @@ export async function fetchData<T>(url: string, transformer: Transformer<T>): Pr
         throw new Error(`HTTP error! status: ${res.status}, url: ${url}`);
     }
 
-    return res.json();
+    return transformer(await res.json());
 };
 
 /**
