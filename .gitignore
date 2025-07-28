@@ -487,3 +487,6 @@ $RECYCLE.BIN/
 # External libraries and build assets
 **/wwwroot/lib/
 **/wwwroot/dist/
+
+# Odds and ends
+**/wwwroot/charts/

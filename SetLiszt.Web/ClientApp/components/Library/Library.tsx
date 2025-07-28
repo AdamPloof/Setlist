@@ -3,7 +3,7 @@ import React, { JSX, useState, useEffect } from 'react';
 import { Song } from '../../types/entities';
 import { SongListProps, SongViewerProps } from '../../types/componentProps';
 import { fetchData } from '../../includes/utils';
-import { URL_LIST_SONGS } from '../../includes/paths';
+import { URL_LIST_SONGS, URL_CHARTS_BASE } from '../../includes/paths';
 
 function songTransformer(data: any[]): Song[] {
     const songs: Song[] = data.map(d => {
@@ -16,6 +16,25 @@ function songTransformer(data: any[]): Song[] {
     });
 
     return songs;
+}
+
+function LibraryToolbar(): JSX.Element {
+    return (
+        <div className="library-toolbar border rounded w-100 p-2 d-flex flex-row justify-content-between">
+            <div className="toolbar-left">
+                <button className="btn btn-sm btn-outline-primary">Upload</button>
+            </div>
+            <div className="toolbar-right">
+                <button className="btn btn-sm btn-outline-secondary">Concert</button>
+                &nbsp;
+                <button className="btn btn-sm btn-outline-secondary">Bass</button>
+                &nbsp;
+                <button className="btn btn-sm btn-outline-secondary">Bb</button>
+                &nbsp;
+                <button className="btn btn-sm btn-outline-secondary">Eb</button>
+            </div>
+        </div>
+    );
 }
 
 function SongListFilter(): JSX.Element {
@@ -63,7 +82,16 @@ function SongViewer({ song }: SongViewerProps): JSX.Element | null {
     // }
 
     return (
-        <div className="song-viewer">Test song...</div>
+        <div className="song-viewer">
+            <object
+                data={URL_CHARTS_BASE + 'C - Secret of the Forest.pdf'}
+                type="application/pdf"
+                width={'100%'}
+                height={'800px'}
+            >
+                <p><a href="#">Secret of the Forest</a></p>
+            </object>
+        </div>
     );
 }
 
@@ -103,7 +131,8 @@ export default function Library(): JSX.Element {
                 {<SongListFilter />}
                 {loading ? <Loader /> : <SongList songs={songs} />}
             </div>
-            <div className="song-viewer-container w-75">
+            <div className="song-viewer-container w-75 d-flex flex-column">
+                <LibraryToolbar />
                 {<SongViewer song={selectedSong} />}
             </div>
         </div>
