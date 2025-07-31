@@ -8,4 +8,9 @@ public class LibraryController : Controller {
     public IActionResult List() {
         return View();
     }
+
+    [Route("/library/upload", Name = "UploadToLibrary")]
+    public IActionResult Upload() {
+        return View();
+    }
 }

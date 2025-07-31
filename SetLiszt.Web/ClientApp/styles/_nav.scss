@@ -3,6 +3,10 @@
 @import "variables";
 
 // Main nav
+.sl-nav {
+    background-color: $sl-brown-lightest;
+}
+
 .navbar-brand {
     font-family: "Antic Didone", serif;
 }
@@ -11,6 +15,7 @@
     position: absolute;
     top: 0;
     right: 0;
+    width: fit-content;
     // padding-left: calc($nav-link-padding-x + 0.75rem);
     // padding-right: 1rem;
 
@@ -28,10 +33,13 @@
             max-width: $max-width;
         }
     }
+
+    .nav-link:hover {
+        text-decoration: underline;
+    }
 }
 
 .sl-nav-main {
-    border-bottom: 1px solid $border-color;
     padding-left: 0;
     padding-right: 0;
 

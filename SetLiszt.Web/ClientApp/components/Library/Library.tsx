@@ -126,7 +126,7 @@ export default function Library(): JSX.Element {
     };
 
     return (
-        <div className="library-wrapper w-100 d-flex flex-row justify-content-between">
+        <div className="library-wrapper w-100 d-flex flex-row justify-content-between container">
             <div className="song-list-container w-25">
                 {<SongListFilter />}
                 {loading ? <Loader /> : <SongList songs={songs} />}

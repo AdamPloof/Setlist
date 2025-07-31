@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-body box-shadow mb-3">
+<nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light sl-nav box-shadow mb-3 border-bottom">
     <div class="container-fluid sl-nav-container">
         <a class="navbar-brand setliszt-brand" asp-area="" asp-controller="Home" asp-action="Index">
             <img src="~/images/treble_clef.png" alt="trebel clef logo" width="40px" style="margin-right: -10px;">
@@ -10,28 +10,21 @@
         </button>
         <div class="navbar-collapse collapse justify-content-center" id="navbarCenter">
             <ul class="navbar-nav nav sl-nav-main">
-                <li class="nav-item">
-                    <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                <li class="nav-item d-flex flex-row">
+                    @* <img src="~/images/icons/library_light.svg" alt="library icon" width="24px" class="me-0"> *@
+                    <a class="nav-link text-dark" asp-area="" asp-controller="Library" asp-action="List">Library</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                <li class="nav-item d-flex flex-row">
+                    @* <img src="~/images/icons/projects_light.svg" alt="projects icon" width="24px" class="me-0"> *@
+                    <a class="nav-link text-dark" href="#">Projects</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link text-dark" href="#">Docs</a>
+                <li class="nav-item d-flex flex-row">
+                    @* <img src="~/images/icons/gigs_light.svg" alt="gigs icon" width="24px" class="me-0"> *@
+                    <a class="nav-link text-dark" href="#">Gigs</a>
                 </li>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link text-dark dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
-                        aria-expanded="false">Dropdown</a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
-                        <li><a class="dropdown-item" href="#">Separated link</a></li>
-                    </ul>
+                <li class="nav-item d-flex flex-row">
+                    @* <img src="~/images/icons/setlist_light.svg" alt="setlist icon" width="24px" class="me-0"> *@
+                    <a class="nav-link text-dark" href="#">Sets</a>
                 </li>
             </ul>
         </div>

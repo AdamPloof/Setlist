@@ -1,4 +1,5 @@
 @import "fonts";
+@import "variables";
 
 // Customize Bootrap variables
 
@@ -6,11 +7,11 @@
 @import "bootstrap/scss/functions";
 
 // 2. Include any default variable overrides here
-$body-bg: #e8e1d4;
+$body-bg: $sl-brown-lighterer;
 $headings-font-family: "Antic Didone", serif; 
 $dropdown-link-hover-bg: #f3efe8;
 $font-size-base: 1.125rem;
-$border-color: #d5cabf;
+$border-color: $sl-brown-lighter;
 
 // 3. Include remaining bootstrap stylesheets
 @import "bootstrap/scss/bootstrap";
